@@ -2,7 +2,7 @@
   "name": "judging-question-toolkit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "tsup",
     "build": "tsup",
