@@ -19,25 +19,20 @@ export const DiffAnsSame = (
     const min_len = Math.min(input.length, ans.length)
     const diff_base_is_input = min_len === input.length
 
-    // 循环去找相同的部分
     let min_p = 0
     let res_input: number[] = []
     let res_ans: number[] = []
 
     if (diff_base_is_input) {
-        // 遍历输入字符比较答案
         for (let i = 0; i < min_len; i++) {
             let c_tmp = ans.indexOf(input[i], min_p)
             if (c_tmp !== -1) {
-                // 找到了
                 res_input.push(i)
                 res_ans.push(c_tmp)
-                // 重置 min_p
                 min_p = c_tmp + 1
             }
         }
     } else {
-        // 反之
         for (let i = 0; i < min_len; i++) {
             let c_tmp = input.indexOf(ans[i], min_p)
             if (c_tmp !== -1) {
