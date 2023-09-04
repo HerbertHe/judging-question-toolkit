@@ -1,0 +1,19 @@
+{
+  "name": "judging-question-toolkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsup",
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.4",
+    "tsup": "^7.2.0",
+    "vitest": "^0.34.3"
+  }
+}
