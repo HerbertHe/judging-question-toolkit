@@ -24,6 +24,11 @@ import { DiffAnsSame } from "judging-question-toolkit"
 
 const res = DiffAnsSame("abcdfg", "cdefh")
 console.log(res)
+
+/**
+ * Output:
+ * [ [ 2, 3, 4 ], [ 0, 1, 3 ] ]
+ */
 ```
 
 For more, see the source code
