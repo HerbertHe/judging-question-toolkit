@@ -1,4 +1,4 @@
-import { IsEqual } from "./IsEqual"
+import { IsArrayEqual } from "./IsEqual"
 
 /**
  * Diff `Input` & `Answer` Same Part for Multi Choice
@@ -19,7 +19,7 @@ export const DiffMultiChoiceSame = <T>(
 
     if (input_h.length === 0 || ans_h.length === 0) return undefined
 
-    if (IsEqual(input_h, ans_h)) return "equal"
+    if (IsArrayEqual(input_h, ans_h)) return "equal"
 
     const min_len = Math.min(input_h.length, ans_h.length)
     const diff_base_is_input = min_len === input_h.length
@@ -64,7 +64,7 @@ export const DiffBlankFillingArrays = <T>(
 
     if (input.length > ans.length) return undefined
 
-    if (IsEqual(input, ans)) return []
+    if (IsArrayEqual(input, ans)) return []
 
     let res: number[] = []
 

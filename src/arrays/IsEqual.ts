@@ -4,6 +4,6 @@
  * @param ans 
  * @returns 
  */
-export const IsEqual = <T>(input: T[], ans: T[]) => {
+export const IsArrayEqual = <T>(input: T[], ans: T[]) => {
     return input === ans
 }

@@ -11,10 +11,27 @@ test("测试 DiffAnsSame 函数", () => {
     console.log(res)
 })
 
+test("测试 DiffAnsSame 函数（字符串序列）", () => {
+    const res = DiffAnsSame(
+        ["a", "b", "c", "xd", "f", "g"],
+        ["c", "xd", "e", "f", "h"]
+    )
+    console.log(res)
+})
+
 test("测试 DiffAnsSameAndReturnValue 函数", () => {
     const res = DiffAnsSameAndReturnValue("abcdfg", "cdefh")
     console.log(res)
 })
+
+test("测试 DiffAnsSameAndReturnValue 函数（字符串序列）", () => {
+    const res = DiffAnsSameAndReturnValue(
+        ["a", "b", "c", "xd", "f", "g"],
+        ["c", "xd", "e", "f", "h"]
+    )
+    console.log(res)
+})
+
 
 test("测试 DiffAns 函数", () => {
     const res = DiffAns("abcdfg", "cdefh")

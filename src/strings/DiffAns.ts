@@ -6,9 +6,9 @@ import { IsEqual } from "./IsEqual"
  * @param ans
  * @returns
  */
-export const DiffAnsSame = (
-    input: string,
-    ans: string
+export const DiffAnsSame = <T extends string | string[]>(
+    input: T,
+    ans: T
 ): number[][] | "equal" | undefined => {
     if (!input || !ans) return undefined
 
@@ -53,10 +53,10 @@ export const DiffAnsSame = (
  * @param ans
  * @returns
  */
-export const DiffAnsSameAndReturnValue = (
-    input: string,
-    ans: string
-): [number | "equal", string][][] => {
+export const DiffAnsSameAndReturnValue = <T extends string | string[]>(
+    input: T,
+    ans: T
+): [number | "equal", string | string[]][][] => {
     const res = DiffAnsSame(input, ans)
 
     if (!res) return []
@@ -75,7 +75,10 @@ export const DiffAnsSameAndReturnValue = (
  * @param ans
  * @returns
  */
-export const DiffAns = (input: string, ans: string): number[][] => {
+export const DiffAns = <T extends string | string[]>(
+    input: T,
+    ans: T
+): number[][] => {
     const same = DiffAnsSame(input, ans)
 
     if (!same) return []
@@ -99,7 +102,10 @@ export const DiffAns = (input: string, ans: string): number[][] => {
  * @param ans
  * @returns
  */
-export const DiffAnsAndReturnValue = (input: string, ans: string) => {
+export const DiffAnsAndReturnValue = <T extends string | string[]>(
+    input: T,
+    ans: T
+) => {
     const diff = DiffAns(input, ans)
 
     if (diff.length === 0) return []
