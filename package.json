@@ -1,6 +1,6 @@
 {
   "name": "judging-question-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Toolkit for Judging Question",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
